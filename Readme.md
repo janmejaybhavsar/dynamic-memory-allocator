@@ -4,17 +4,18 @@ Created my own dynamic memory allocator in C, which is a library that provides f
 
 ## Features
 
-- Efficient allocation and deallocation of memory
-- Ability to allocate memory blocks of different sizes
-- Allocation alignment to ensure proper data structure alignment and improve performance
-  - Support for any multiple of 8-byte alignment through memalign function
+- Supports memory alignment
+- Supports memory allocation of different sizes
+- Supports memory reallocation
+- Supports memory freeing
+- Supports memory error handling
 
 ## Installation
 
 The dependencies for this project are all included in the Makefile, and you can install and run it utilizing the following commands
 ```bash
-git clone https://github.com/daminals/Dynamic-Memory-Allocator.git
-cd Dynamic-Memory_allocator
+git clone https://github.com/janmejaybhavsar/dynamic-memory-allocator.git
+cd dynamic-memory-allocator
 make clean all
 ```
 You will now be able to play with the different functions in this library
@@ -46,7 +47,3 @@ Here's an example of how to use the allocator to allocate memory:
   sf_free(ptr2);
   sf_free(ptr3);
 ```
-
-## Error Handling
-
-The allocator includes error handling to catch invalid memory accesses, out-of-bounds accesses, and other memory-related errors. If an error is detected, the allocator will set errno accordingly and return NULL.
